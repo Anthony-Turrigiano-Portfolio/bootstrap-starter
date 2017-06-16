@@ -6,11 +6,17 @@
   "dependencies": {
     "bootstrap": "^3.3.7",
     "bower": "^1.8.0",
+    "browser-sync": "^2.18.12",
     "jquery": "^3.2.1"
   },
-  "devDependencies": {},
+  "devDependencies": {
+    "concurrently": "^3.4.0",  
+    "localtunnel": "^1.8.3"
+  },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "serve": "concurrently \"npm run bs\" \"npm run lt\"",
+    "bs": "browser-sync start --files \"**/*.css, **/*.html, **/*.js\" --host $IP --port $PORT --server",
+    "lt": "lt --port 3000 --local-host 0.0.0.0 --subdomain bootstrapstarter"
   },
   "keywords": [],
   "author": "",

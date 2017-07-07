@@ -1,7 +1,10 @@
+# 1.1.4 - 07-07-2017
+- Refractor bs script in package.json, was causing program to crash
+
 # 1.1.3 - 07-07-2017
 - Install cssnano
 - Refractor build-styles script to export css sourcemap
-- 
+
 # 1.1.2 - 07-07-2017
 - Install postcss
 - Install postcss-cli

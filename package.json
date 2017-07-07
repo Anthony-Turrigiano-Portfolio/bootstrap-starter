@@ -1,6 +1,6 @@
 {
   "name": "bootstrap-starter",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "",
   "main": "index.js",
   "dependencies": {
@@ -10,13 +10,19 @@
     "jquery": "^3.2.1"
   },
   "devDependencies": {
-    "concurrently": "^3.4.0",  
-    "localtunnel": "^1.8.3"
+    "concurrently": "^3.4.0",
+    "localtunnel": "^1.8.3",
+    "onchange": "^3.2.1",
+    "postcss": "^6.0.6",
+    "postcss-cli": "^4.1.0",
+    "postcss-font-magician": "^2.0.0"
   },
   "scripts": {
-    "serve": "concurrently \"npm run bs\" \"npm run lt\"",
+    "serve": "concurrently \"npm run bs\" \"npm run lt\" \"npm run build:styles\"",
     "bs": "browser-sync start --files \"**/*.css, **/*.html, **/*.js\" --host $IP --port $PORT --server",
-    "lt": "lt --port 3000 --local-host 0.0.0.0 --subdomain bootstrapstarter"
+    "lt": "lt --port 3000 --local-host 0.0.0.0 --subdomain bootstrapstarter",
+    "build:styles": "onchange \"public/css/style.css\" -- npm run fontMagician",
+    "fontMagician": "postcss public/css/style.css -u postcss-font-magician -o public/css/style.min.css"
   },
   "keywords": [],
   "author": "",

@@ -1,4 +1,12 @@
-# 1.1.0 - 06-16-2017
+# 1.1.2 - 07-07-2017
+- Install postcss
+- Install postcss-cli
+- Install postcss-font-magician 
+- Install onchange
+- Setup fontMagician script and build:styles script in package.json
+- Refractor package.json file and CHANGELOG.md file to update typo with previous version number
+
+# 1.1.1 - 06-16-2017
 - Install browser-sync
 - Install localtunnel
 

@@ -1,3 +1,7 @@
+# 1.1.3 - 07-07-2017
+- Install cssnano
+- Refractor build-styles script to export css sourcemap
+- 
 # 1.1.2 - 07-07-2017
 - Install postcss
 - Install postcss-cli

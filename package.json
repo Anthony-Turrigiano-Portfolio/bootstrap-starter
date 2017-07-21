@@ -5,7 +5,6 @@
   "main": "index.js",
   "dependencies": {
     "bootstrap": "^3.3.7",
-    "bower": "^1.8.0",
     "browser-sync": "^2.18.12",
     "jquery": "^3.2.1"
   },
@@ -19,8 +18,9 @@
     "postcss-font-magician": "^2.0.0"
   },
   "scripts": {
+    "start": "npm run serve",
     "serve": "concurrently \"npm run bs\" \"npm run lt\" \"npm run build:styles\"",
-    "bs": "browser-sync start --server --no-open",
+    "bs": "browser-sync start --files \"**/*.css, **/*.html, **/*.js\" --host $IP --port $PORT --server",
     "lt": "lt --port 3000 --local-host 0.0.0.0 --subdomain bootstrapstarter",
     "build:styles": "onchange \"public/css/style.css\" -- npm run fontMagician",
     "fontMagician": "postcss public/css/style.css --map -u postcss-font-magician -u cssnano -o public/css/style.min.css"

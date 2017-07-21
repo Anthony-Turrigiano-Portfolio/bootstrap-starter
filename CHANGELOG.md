@@ -1,3 +1,8 @@
+# 1.1.5 - 07-21-2017 
+- Rollback changes made to bs script in package.json
+- Removed bower
+- A start script in package.json file
+
 # 1.1.4 - 07-07-2017
 - Refractor bs script in package.json, was causing program to crash
 
